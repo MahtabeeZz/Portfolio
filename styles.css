@@ -15,7 +15,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   display: block;
-  border-radius: 10%;
+  border-radius: 24px;
 }
 
 h1 {
@@ -30,10 +30,12 @@ p {
 }
 
 .container img {
-  max-width:40%;
+  max-width: 100%;
+  width: 30%;
+  height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 50%;
+  border-radius: 50%; /* Make the image circular */
 }
 
 .email-button {
@@ -50,4 +52,53 @@ p {
 
 .email-button:hover {
   background-color: #4f6abd;
+}
+
+/* Media Query for tablets and smaller devices */
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 50px auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .container img {
+    border-radius: 25%; /* Adjust the circle size for smaller screens */
+  }
+
+  .email-button {
+    font-size: 14px;
+  }
+}
+
+/* Media Query for smaller mobile devices */
+@media screen and (max-width: 480px) {
+  .container {
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .container img {
+    border-radius: 20%; /* Adjust the circle size for even smaller screens */
+  }
+
+  .email-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
 }
