@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  max-width: 500px;
+  max-width: 100%;
   margin: 100px auto;
   background-color: #fff;
   padding: 20px;
@@ -47,7 +47,7 @@ p {
   border-radius: 5px;
   font-weight: bold;
   margin-top: 20px;
-  border-radius: 8px;
+  border-radius: 64px;
 }
 
 .email-button:hover {
@@ -80,9 +80,9 @@ p {
 /* Media Query for smaller mobile devices */
 @media screen and (max-width: 480px) {
   .container {
-    margin: 30px auto;
-    padding: 10px;
-    border-radius: 12px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
   }
 
   h1 {
