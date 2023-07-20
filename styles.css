@@ -1,104 +1,53 @@
-body {
-  background-color: #f1f1f1;
-  font-family: Arial, sans-serif;
+/* Keep the existing CSS rules, and you can add these styles for the new div that wraps the image and buttons */
+.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-center img {
+  margin-bottom: 64px; /* Increase the margin to 64px for more spacing */
+  max-width: 200px; /* Set the maximum width of the image to 200px */
+  width: 100%; /* Make sure the image width adjusts to its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.text-center .btn {
+  margin: 4px; /* Update the margin to 4px for both vertical and horizontal spacing */
+  border-radius: 24px; /* Add rounded border radius to the buttons */
+}
+
+/* Keep the existing CSS rules, and add these styles for the new text container */
+.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin: 0;
-  padding: 0;
 }
 
-.container {
-  max-width: 100%;
-  margin: 100px auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  display: block;
-  border-radius: 24px;
+.text-center h1 {
+  font-size: 24px; /* You can adjust the font size for the header if needed */
 }
 
-h1 {
-  font-size: 24px;
-  color: #333;
+/* Keep the existing CSS rules and add these styles for the secondary button design */
+.btn-outline-primary {
+  color: #000; /* Black text color */
+  border: 2px solid #bca5f2; /* Purple border color */
 }
 
-p {
-  font-size: 16px;
-  color: #666;
-  margin-top: 20px;
+.btn-outline-primary:hover {
+  background-color: #bca5f2; /* Purple background color on hover */
+  border-color: #bca5f2; /* Purple border color on hover */
+  color: #fff; /* White text color on hover */
 }
 
-.container img {
-  max-width: 100%;
-  width: 30%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%; /* Make the image circular */
+/* Additional styles for the primary button design */
+.btn-primary {
+  background-color: #bca5f2;
+  border: 2px solid #bca5f2;
 }
 
-.email-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #778fdf;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-top: 20px;
-  border-radius: 64px;
-}
-
-.email-button:hover {
-  background-color: #4f6abd;
-}
-
-/* Media Query for tablets and smaller devices */
-@media screen and (max-width: 768px) {
-  .container {
-    margin: 50px auto;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  .container img {
-    border-radius: 25%; /* Adjust the circle size for smaller screens */
-  }
-
-  .email-button {
-    font-size: 14px;
-  }
-}
-
-/* Media Query for smaller mobile devices */
-@media screen and (max-width: 480px) {
-  .container {
-    margin: 0px;
-    padding: 0px;
-    border-radius: 0px;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  .container img {
-    border-radius: 20%; /* Adjust the circle size for even smaller screens */
-  }
-
-  .email-button {
-    font-size: 12px;
-    padding: 8px 16px;
-  }
+.btn-primary:hover {
+  background-color: #7459b5; /* Darker shade on hover */
+  border: 2px solid #7459b5; /* Darker border on hover */
 }
