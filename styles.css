@@ -7,7 +7,7 @@
 
 .text-center img {
   margin-bottom: 64px; /* Increase the margin to 64px for more spacing */
-  max-width: 40%; /* Make the image responsive by setting the maximum width to 100% */
+  max-width: 50%; /* Make the image responsive by setting the maximum width to 100% */
   height: auto; /* Maintain aspect ratio */
 }
 
@@ -19,14 +19,14 @@
 }
 
 .text-center .btn {
-  margin: 16px; /* Update the margin to 8px for all sides */
+  margin: 16px; /* Update the margin to 16px for all sides */
   padding: 0px;
   border-radius: 32px !important; /* Set border-radius to 0 for square appearance */
-  min-width: 180px; /* Set a minimum width for the buttons */
-  height: 54px; /* Set a fixed height for the buttons */
-  font-size: 16 px; /* Adjust font size for better visibility on buttons */
+  min-width: 220px; /* Set a minimum width for the buttons */
+  height: 70px; /* Set a fixed height for the buttons */
+  font-size: 20px;  /* Adjust font size for better visibility on buttons */
   text-align: center; /* Center the text inside the buttons */
-  line-height: 54px; /* Center the text vertically inside the buttons */
+  line-height: 70px; /* Center the text vertically inside the buttons */
   background-color: #bca5f2; /* Set the background color for the buttons */
   color: #fff; /* Set the text color for the buttons */
   border: 2px solid #bca5f2; /* Add a purple border */
@@ -79,21 +79,17 @@
 
   .container img {
     border-radius: 20%; /* Adjust the circle size for even smaller screens */
-  }
-
-  .text-center img {
-    max-width: 40%; /* Make the image responsive by setting the maximum width to 100% */
+    max-width: 70%; /* Make the image bigger for mobile devices */
   }
 
   .text-center .btn {
-    width: 150px; /* Set a fixed width for the buttons on smaller screens */
-    height: 45px; /* Set a fixed height for the buttons on smaller screens */
-    font-size: 14px; /* Adjust the font size for buttons on smaller screens */
+    width: 220px; /* Set a fixed width for the buttons on smaller screens */
+    height: 70px; /* Set a fixed height for the buttons on smaller screens */
+    font-size: 18px; /* Adjust the font size for buttons on smaller screens */
   }
 }
 
-/* Media Query for tablets and larger devices (from 481px to 1024px) */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .container {
     margin: 30px auto;
   }
@@ -108,15 +104,31 @@
 
   .container img {
     border-radius: 25%; /* Adjust the circle size for smaller screens */
+    max-width: 70%; /* Make the image bigger for tablets */
   }
 
   .text-center .btn {
-    font-size: 16px; /* Reset font size for buttons on tablets */
+    font-size: 18px; /* Reset font size for buttons on tablets */
   }
 }
 
-/* Media Query for larger devices (greater than 1024px) */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 769px) and (max-width: 1025px) {
+  .text-center .btn-container {
+    flex-direction: column; /* Stack the buttons vertically */
+    align-items: center; /* Center the buttons horizontally */
+  }
+
+  .text-center .btn {
+    margin: 16px; /* Update the margin to 16px for all sides */
+  }
+
+  .btn-group-vertical {
+    flex-direction: row;
+    align-items: end;
+  }
+}
+
+@media screen and (min-width: 1026px) {
   .container {
     margin: 50px auto;
   }
@@ -131,14 +143,18 @@
 
   .container img {
     border-radius: 25%; /* Adjust the circle size for smaller screens */
+    max-width: 70%; /* Make the image bigger for larger screens */
   }
-}
 
-/* Media Query for larger devices (greater than 768px) to stack buttons horizontally */
-@media screen and (min-width: 769px) {
-  .btn-group-vertical.btn-group-lg {
-    display: flex;
+  .text-center .btn {
+    font-size: 20px; /* Adjust the font size for buttons on larger screens */
+    width: 250px; /* Increase the width of buttons on larger screens */
+    height: 70px; /* Increase the height of buttons on larger screens */
+    line-height: 70px; /* Center the text vertically inside the buttons */
+  }
+
+  .btn-group-vertical {
     flex-direction: row;
-    align-items: baseline;
+    align-items: end;
   }
 }
